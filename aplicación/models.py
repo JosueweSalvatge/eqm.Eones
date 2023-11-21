@@ -9,13 +9,13 @@ class Persona(models.Model):
     grup = models.CharField(max_length=50)
     vip = models.BooleanField(default=False)
     acomp = models.BooleanField(default=False)
-    def _hace_vip = models.BooleanField(default=False):
+    def _hace_vip (self):
         pass
-    def _no_vip = models.BooleanField(default=False):
+    def _no_vip (self):
         pass
-    def _si_acomp = models.BooleanField(default=False):
+    def _si_acomp (self):
         pass
-    def _no_acomp = models.BooleanField(default=False):
+    def _no_acomp (self):
         pass
 
     def __str__(self):
