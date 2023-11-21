@@ -11,7 +11,7 @@ def detalle_alumno(request, num_exp):
     alumno = get_object_or_404(Persona, num_exp=num_exp)
 
     # Pasar la lista de alumnos al template
-    return render(request, 'lista_alumnos.html', {'alumno': alumno})
+    return render(request, 'detalle_alumno.html', {'alumno': alumno})
 
 def nueva_visita(request):
     pass
