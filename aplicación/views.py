@@ -7,10 +7,10 @@ tiempo_anterior = datetime()  # Formato: Año, Mes, Día, Hora, Minuto, Segundo
 tiempo_actual = datetime.now()  # Tiempo actual
 diferencia = tiempo_actual - tiempo_anterior
 
-def lista_Persona(request):
+def lista_alumnos(request):
     pass
 
-def detalle_Persona(request, num_exp):
+def detalle_alumno(request, num_exp):
      # Obtener la lista de todos los alumnos desde la base de datos
     Persona = get_object_or_404(Persona, num_exp=num_exp)
 

@@ -19,6 +19,7 @@ def nueva_visita(request):
         tiempo_anterior = datetime()  # Formato: Año, Mes, Día, Hora, Minuto, Segundo
     except:
          tiempo_anterior = datetime(2001, 1, 1, 1, 1, 1)
+         
     tiempo_actual = datetime.now()  # Tiempo actual
     diferencia = tiempo_actual - tiempo_anterior
     if Persona.VIP and Persona.acompanado:
