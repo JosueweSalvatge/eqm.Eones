@@ -3,9 +3,7 @@ from .models import Persona, Visitas
 from django.shortcuts import render, get_object_or_404
 from datetime import datetime, timedelta
 
-tiempo_anterior = datetime()  # Formato: Año, Mes, Día, Hora, Minuto, Segundo
-tiempo_actual = datetime.now()  # Tiempo actual
-diferencia = tiempo_actual - tiempo_anterior
+
 
 def lista_alumnos(request):
     pass
@@ -17,8 +15,13 @@ def detalle_alumno(request, num_exp):
     # Pasar la lista de alumnos al template
     return render(request, 'detalle_alumno.html', {'alumno': Persona})
 
-def nueva_visita(request):
-    pass
+def nueva_visita(request, num_exp):
+    try:
+        tiempo_anterior = Visitas.objects.filter(alumno=num_exp).order_by('-fecha_hora')[:1]
+    except:
+        pass
+    tiempo_actual = datetime.now()  # Tiempo actual
+    diferencia = tiempo_actual - tiempo_anterior
     if Persona.VIP and Persona.acompanado:
         if diferencia > timedelta(hours=2):
             return render(request, 'vip_acompanado_pantalla_naranja.html', {'Persona': Persona})
