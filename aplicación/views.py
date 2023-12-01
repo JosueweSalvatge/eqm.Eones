@@ -10,7 +10,7 @@ def lista_alumnos(request):
 
 def detalle_alumno(request, num_exp):
      # Obtener la lista de todos los alumnos desde la base de datos
-    Persona = get_object_or_404(Persona, num_exp=num_exp)
+    alumno = get_object_or_404(Persona, num_exp=num_exp)
 
     # Pasar la lista de alumnos al template
     return render(request, 'detalle_alumno.html', {'alumno': Persona})
