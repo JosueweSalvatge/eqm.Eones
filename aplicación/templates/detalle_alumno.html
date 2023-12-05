@@ -1,6 +1,4 @@
-{% extends 'blog/base.html' %}
 
-{% block content %}
 
 <html>
 <head>
@@ -14,12 +12,17 @@
         <li><strong>Curso:</strong> {{ alumno.curs }}</li>
         <li><strong>Grupo:</strong> {{ alumno.grup }}</li>
         <li><strong>VIP:</strong> {% if alumno.vip %}Sí{% else %}No{% endif %}</li>
-        <li><strong>Acompañante:</strong> {% if alumno.acomp %}Sí{% else %}No{% endif %}</li>
-        <li><strong>Def. Hace VIP:</strong> {% if alumno.def_hace_vip %}Sí{% else %}No{% endif %}</li>
-        <li><strong>Def. No VIP:</strong> {% if alumno.def_no_vip %}Sí{% else %}No{% endif %}</li>
-        <li><strong>Def. Sí Acompañante:</strong> {% if alumno.def_si_acomp %}Sí{% else %}No{% endif %}</li>
-        <li><strong>Def. No Acompañante:</strong> {% if alumno.def_no_acomp %}Sí{% else %}No{% endif %}</li>
+        <li><strong>Acompañante:</strong> {% if alumno.acomp %}Sí{% else %}No{% endif %}</li>            
     </ul>
+    <ol>
+        {% for v in visitas %}
+            <li 
+                {% if v.aceptada %} class="vAceptada">
+                {% else %} class="vDenegada">
+                {% endif %}
+                {{ v.fecha_hora }} Aceptada: {{ v.aceptada }}</li>
+        {% endfor %}
+    </ol>
 </body>
 </html>
-{% endblock %}
+

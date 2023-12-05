@@ -3,7 +3,7 @@ from django.db import models
 
 class Persona(models.Model):
     nombre = models.CharField(max_length=255)
-    num_exp = models.CharField(max_length=20, unique=True)
+    num_exp = models.IntegerField(unique=True, primary_key=True)
     foto = models.ImageField(upload_to='fotos/', null=True, blank=True)
     curs = models.CharField(max_length=50)
     grup = models.CharField(max_length=50)

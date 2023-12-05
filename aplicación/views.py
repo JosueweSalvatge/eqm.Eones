@@ -6,14 +6,15 @@ from datetime import datetime, timedelta
 
 
 def lista_alumnos(request):
-    pass
+    return render(request, 'lista_alumnos.html', {})
 
 def detalle_alumno(request, num_exp):
      # Obtener la lista de todos los alumnos desde la base de datos
+    
     alumno = get_object_or_404(Persona, num_exp=num_exp)
-
+    visitas = Visitas.objects.filter(alumno=num_exp).order_by('fecha_hora')
     # Pasar la lista de alumnos al template
-    return render(request, 'detalle_alumno.html', {'alumno': Persona})
+    return render(request, 'detalle_alumno.html', {'alumno': alumno, 'visitas':visitas})
 
 def nueva_visita(request, num_exp):
     try:
