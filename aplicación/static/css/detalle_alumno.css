@@ -1,0 +1,35 @@
+/* detalle_alumno.css */
+
+/* Estilos generales para la página de detalle del alumno */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para la señal visual */
+#señal-visual {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.luz-verde {
+    background-color: green;
+}
+
+.luz-roja {
+    background-color: red;
+}
+
+/* Estilos para otros elementos de la página */
+#informacion-alumno {
+    margin-bottom: 20px;
+}
+
+/* Agrega más estilos según sea necesario para tu aplicación */

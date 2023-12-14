@@ -19,8 +19,8 @@
     <ol>
         {% for v in visitas %}
             <li 
-                {% if v.aceptada %} class="vAceptada">
-                {% else %} class="vDenegada">
+                {% if v.aceptada %} class=".luz-verde">
+                {% else %} class=".luz-roja">
                 {% endif %}
                 {{ v.fecha_hora }} Aceptada: {{ v.aceptada }}</li>
         {% endfor %}
