@@ -2,7 +2,7 @@
 
 /* Estilos generales para la página de detalle del alumno */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Comic Sans', sans-serif;
     margin: 20px;
 }
 
@@ -13,18 +13,18 @@ body {
 
 /* Estilos para la señal visual */
 #señal-visual {
-    width: 50px;
+    width: 60px;
     height: 50px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .luz-verde {
-    background-color: green;
+    background-color: rgb(75, 185, 75);
 }
 
 .luz-roja {
-    background-color: red;
+    background-color: rgb(153, 43, 43);
 }
 
 /* Estilos para otros elementos de la página */
