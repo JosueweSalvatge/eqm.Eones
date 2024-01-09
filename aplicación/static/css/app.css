@@ -5,12 +5,14 @@ body {
     font-family: 'Comic Sans', sans-serif;
     margin: 20px;
     background-color: rgb(123, 75, 185);
+    color:rgb(238, 241, 243)
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     background-color: rgb(75, 168, 185);
+    color:rgb(233, 233, 233)
 }
 
 /* Estilos para la señal visual */
